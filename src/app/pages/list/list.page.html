@@ -6,4 +6,13 @@
 
 <ion-content>
 
+  <ion-list>
+    <ion-item button [routerLink]="['/item-info',m.id]" *ngFor="let m of (MoviesList | async)">
+      {{ m.id }}
+      {{ m.title }}
+      {{ m.actor }}
+      {{ m.rating }}
+    </ion-item>
+  </ion-list>
+
 </ion-content>
